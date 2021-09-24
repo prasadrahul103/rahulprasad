@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real state</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .logo img {
+            height: 70px;
+            width: 70px;
+            padding: 3px 2px;
+        }
+
+        #landing {
+            display: flex;
+            position: relative;
+        }
+
+        #landing::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #landing ul {
+            display: flex;
+            align-items: center;
+        }
+
+        #landing ul li {
+            list-style: none;
+        }
+
+        #landing ul li a {
+            text-decoration: none;
+            margin: 20px 10px;
+            padding: 10px;
+            color: white;
+            border-radius: 23px;
+
+        }
+
+        #landing ul li a:hover {
+            color: black;
+            background-color: cornsilk;
+
+        }
+
+        #contactdetails {
+            display: flex;
+            display: block;
+            width: 300px;
+            margin-left: auto;
+            align-items: center;
+
+            /* align-items:flex-end; */
+        }
+
+        .login {
+            padding: 15px;
+            margin: 5px;
+            margin-top: 14px;
+            border-radius: 2px;
+            border-color: red;
+            border-radius: 23px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bolder;
+        }
+
+        .login:hover {
+            background-color: black;
+            border-color: white;
+            color: white;
+            /* border-radius: 18px; */
+        }
+
+        /* container  */
+        #container {
+            /* position: relative; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 250px;
+            margin: 90px 35px;
+            padding: 10px 15px;
+
+        }
+
+        #container::before {
+            content: "";
+            width: 100%;
+            height: 500px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            background: url('containerbg1.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.39;
+        }
+
+        #container h1 {
+            margin: 94px 17px 37px 17p;
+            padding: 10px;
+            text-align: center;
+            font-size: 2.3rem;
+        }
+
+        .para {
+            padding: 20px;
+            margin: 75px 10px;
+            font-size: 1.3rem;
+        }
+
+        #container p {
+            text-align: center;
+
+        }
+
+        .btn {
+            display: block;
+            width: 190px;
+            margin: auto;
+            padding: 10px;
+            /* margin-bottom: 70px; */
+            border-radius: 23px;
+            cursor: pointer;
+            font-weight: bolder;
+            /* margin: 25px 10px; */
+
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: rgb(233, 229, 229);
+        }
+
+        /* section ready to move  */
+
+        /* rental  */
+        .container-1 {
+            /* display: grid; */
+            grid-gap: 1.5rem;
+            grid-template-columns: 250px 250px 250px;
+            /* justify-content: ; */
+            /* background-color: rgb(146, 198, 228); */
+            /* new */
+            display: flex;
+
+
+        }
+
+        .box2 {
+            /* border:2px solid black; */
+            /* background-color: rgb(162, 173, 168); */
+            text-align: center;
+        }
+
+        .box2 img {
+            height: 200px;
+            width: 200px;
+            display: block;
+            margin: auto;
+
+        }
+
+        h1 {
+            text-align: left;
+            /* background-color: rgb(77, 161, 182); */
+            margin: 3px;
+            padding: 12px;
+        }
+
+        p {
+            font-weight: bolder;
+        }
+
+        /* 3 section  */
+        .diflex {
+            display: flex;
+            /* flex-direction: column; */
+        }
+
+        .box3 {
+            border: 2px solid red;
+            border-radius: 23px;
+            height: 300px;
+            width: 250px;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 20px 25px;
+
+        }
+
+        .box3 img {
+            height: 175px;
+            width: 150px;
+            display: block;
+            margin: auto;
+            padding: 20px 0px;
+            /* margin: 25px 100px; */
+            /* border:2px solid tomato; */
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .box3:hover {
+            transform: scale(1.1);
+        }
+
+        /* section4  */
+        .pattners {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .pattners img {
+            height: 145px;
+            width: 145px;
+            margin: 30px 60px;
+
+        }
+
+        .pattner {
+            position: relative;
+        }
+
+        .pattner::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url('bagimg.jpg');
+            position: absolute;
+            z-index: -1;
+            opacity: 0.34;
+        }
+
+        /* social section 5  */
+        .social {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-5 img {
+            height: 150px;
+            width: 150px;
+        }
+        .allsocial{
+            margin: 25px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .social{
+            position: relative;
+        }
+        .social::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url('socialbg.jpg');
+            position: absolute;
+            z-index: -1;
+            opacity: 0.34;
+
+        }
+        .last{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <nav id="landing">
+        <div class="logo">
+            <img src="logo1.jpg" alt="logo1">
+        </div>
+        <ul>
+            <li class="index"><a href="#">New Project</a></li>
+            <li class="index"><a href="#">Rent</a></li>
+            <li class="index"><a href="#">Buy</a></li>
+            <li class="index"><a href="#">Find Retailers</a></li>
+            <li class="index"><a href="#">Offers</a></li>
+        </ul>
+        <div id="contactdetails">
+            <ul>
+                <button class="login">Login</button>
+                <button class="login">Sign Up</button>
+                <button class="login">Contact US</button>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <section id="container">
+        <h2>Welcome To Your Deream </h2>
+        <div class="para">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto ullam magnam atque delectus quos
+                recusandae.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, earum.
+            </p>
+        </div>
+        <button class="btn">Click Here To Find Best</button>
+    </section>
+
+    <h1>Listings</h1>
+    <div class="container-1">
+
+        <div class="box2">2bhk
+            <div class="img">
+                <img src="r1 (1).jpg" alt="r1">
+
+            </div>
+            <h4>
+                price :- 100000 rs <br>
+                with furniture
+
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus.
+            </p>
+        </div>
+        <div class="box2">2bhk
+            <div class="img">
+                <img src="r2.jpg" alt="r1">
+
+            </div>
+            <h4>
+                price :- 100000 rs <br>
+                with furniture
+
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus.
+            </p>
+        </div>
+
+        <div class="box2">1bhk
+            <div class="img">
+                <img src="r2.jpg" alt="r1">
+
+            </div>
+            <h4>
+                price :- 100000 rs <br>
+                with furniture
+
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus.
+            </p>
+        </div>
+        <div class="box2">3bhk
+            <div class="img">
+                <img src="r3.jpg" alt="r1">
+
+            </div>
+            <h4>
+                price :- 100000 rs <br>
+                with furniture
+
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus.
+            </p>
+        </div>
+        <div class="box2">2bhk
+            <div class="img">
+                <img src="r1 (1).jpg" alt="r1">
+
+            </div>
+            <h4>
+                price :- 100000 rs <br>
+                with furniture
+
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus.
+            </p>
+        </div>
+        <div class="box2">1bhk
+            <div class="img">
+                <img src="r3.jpg" alt="r1">
+
+            </div>
+            <h4>
+                price :- 100000 rs <br>
+                with furniture
+
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus.
+            </p>
+        </div>
+    </div>
+    <!-- 3rd part  -->
+    <div class="container-3">
+        <br>
+        <br>
+        <h1>To Konw More About Propert</h1>
+        <div class="diflex">
+
+
+            <div class="box3">
+                <div class="img">
+                    <img src="videocall.jpg" alt="\*/">
+                    <p>Call Or Video Call </p>
+                    <button class="login">Shedule Call</button>
+
+                </div>
+
+            </div>
+            <div class="box3">
+                <div class="img">
+                    <img src="documentv.jpg" alt="\*/">
+                    <p>Uplode Document </p>
+                    <button class="login">Uplode</button>
+
+                </div>
+
+            </div>
+            <div class="box3">
+                <div class="img">
+                    <img src="upcoming.jpg" alt="\*/">
+                    <p>Upcoming Project`s </p>
+                    <button class="login">Know More</button>
+
+                </div>
+
+            </div>
+            <div class="box3">
+                <div class="img">
+                    <img src="finance.jpg" alt="\*/">
+                    <p>Financial option </p>
+                    <button class="login">Know More</button>
+
+                </div>
+
+            </div>
+            <div class="box3">
+                <div class="img">
+                    <img src="interiorde.jpg" alt="\*/">
+                    <p>Interior Designing </p>
+                    <button class="login">Designing Your House</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <section id="section4">
+        <h1>Our pattners</h1>
+        <div class="pattner">
+
+            <div class="pattners">
+                <div class="img">
+                    <img src="pattner1.jpg" alt="">
+
+                </div>
+                <div class="img">
+                    <img src="pattner2.jpg" alt="">
+
+
+                </div>
+                <div class="img">
+                    <img src="pattner3.jpg" alt="">
+                </div>
+                <div class="img">
+                    <img src="pattner4.jpg" alt="">
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <!-- follow us 5 section -->
+    <section class="section-5">
+        <h1> Follow Us To Get Latest Updates</h1>
+        <div class="social">
+            <div class="allsocial">
+                <div class="img">
+                    <img src="social1.jpg" alt="">
+                </div>
+                <button class="login">Follow Us</button>
+            </div>
+
+            <div class="allsocial">
+                <div class="img">
+                    <img src="social2.jpg" alt="">
+                </div>
+                <button class="login">Follow Us</button>
+            </div>
+
+            <div class="allsocial">
+                <div class="img">
+                    <img src="social3.jpg" alt="">
+                </div>
+                <button class="login">Follow Us</button>
+            </div>
+
+            <div class="allsocial">
+                <div class="img">
+                    <img src="social4.jpg" alt="">
+                </div>
+                <button class="login">Follow Us</button>
+            </div>
+
+            <div class="allsocial">
+                <div class="img">
+                    <img src="social6.jpg" alt="">
+                </div>
+                <button class="login">Follow Us</button>
+            </div>
+
+
+        </div>
+
+
+
+
+        </div>
+
+    </section>
+
+    <section class="section-6">
+        <div class="last">
+
+            <p>Web Page Created By Janavi , Rahul , Suha , Kavyashree</p>
+            
+        </div>
+    </section>
+
+
+</body>
+</head>
